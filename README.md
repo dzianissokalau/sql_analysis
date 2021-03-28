@@ -1,1 +1,1 @@
-# sql_analysis
+# Data manipulation and analysis with SQL  
