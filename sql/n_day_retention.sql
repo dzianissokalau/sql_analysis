@@ -13,7 +13,7 @@ FROM (
         -- get the first app visit data for every iser
         SELECT user_id
             , date
-            , FIRST_VALUE(date) OVER (PARTITION BY user_id ORDER BY date ASC) AS cohort_date
+            , MIN(date) OVER (PARTITION BY user_id) AS cohort_date
         FROM `data-analysis-sql-309220.synthetic.app_open`
     ) AS a0
     GROUP BY 1,2
