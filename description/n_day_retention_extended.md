@@ -9,6 +9,11 @@ Generating sequence of numbers (Big Query variant)
 -- generate sequence of numbers between 0 and 364
 SELECT day_number FROM UNNEST(GENERATE_ARRAY(0, 364)) AS day_number;
 ```   
+  
+With this approach we should remove all future days:  
+```sql
+WHERE DATE_ADD(cohort_date, INTERVAL day_number DAY) < CURRENT_DATE
+```
 
 The full query is buy the link: https://github.com/dzianissokalau/sql_analysis/blob/main/sql/n_day_retention_extended.sql  
 
