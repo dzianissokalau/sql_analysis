@@ -10,5 +10,5 @@ Generating sequence of numbers (Big Query variant)
 SELECT day_number FROM UNNEST(GENERATE_ARRAY(0, 364)) AS day_number;
 ```   
 
-The full query is buy the link: https://github.com/dzianissokalau/sql_analysis/blob/main/sql/n_day_retention.sql  
+The full query is buy the link: https://github.com/dzianissokalau/sql_analysis/blob/main/sql/n_day_retention_extended.sql  
 
