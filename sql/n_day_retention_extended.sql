@@ -26,7 +26,6 @@ SELECT days.cohort_date
     , COALESCE(retention_rate, 0) AS retention_rate
 FROM (
     -- generate sequence of numbers between 0 and 364 (first 365 days)
-    -- the approach may be different depends on engine
     SELECT cohort_date
         , day_number 
     FROM UNNEST(GENERATE_ARRAY(0, 364)) AS day_number
@@ -35,6 +34,8 @@ FROM (
         SELECT DISTINCT cohort_date
         FROM cohorts
     ) AS c0
+    -- filter out future days
+    WHERE DATE_ADD(cohort_date, INTERVAL day_number DAY) < CURRENT_DATE
 ) AS days
 -- join cohorts and replace no visites days with 0 (retention rate = 0)
 LEFT JOIN cohorts AS c1 ON c1.cohort_date = days.cohort_date
