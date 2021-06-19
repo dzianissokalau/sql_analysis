@@ -18,4 +18,4 @@ FROM (
     ) AS a0
     GROUP BY 1,2
 ) AS a1
-ORDER BY 1,2
+ORDER BY 1,2;
