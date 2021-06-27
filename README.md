@@ -11,7 +11,7 @@ We want to know what percentage of users return to our product on a specific day
 [SQL](https://github.com/dzianissokalau/sql_analysis/blob/main/sql/n_day_retention.sql)  
 [Description](https://github.com/dzianissokalau/sql_analysis/blob/main/description/n_day_retention.md)
 
-
+_____
   
 ### Segmentation searches by product categories  
 Products: e-commerces, marketplaces.
