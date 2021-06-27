@@ -28,7 +28,7 @@ WHERE DATE_ADD(cohort_date, INTERVAL day_number DAY) < CURRENT_DATE
 ```  
 6. Finally join retention and all posible combination of `cohort_date` and `day_number` and fill missing values with 0:   
 ```sql
-, COALESCE(retention_rate, 0) AS retention_rate
+COALESCE(retention_rate, 0) AS retention_rate
 ```   
   
 The full query is buy the link: https://github.com/dzianissokalau/sql_analysis/blob/main/sql/n_day_retention.sql  
