@@ -21,9 +21,12 @@ When looking for goods or services users can:
 * navigate by selecting a relevant category (A);  
 * use search (B);  
 * combine search and category selection (C).  
+
 We want to know what category users are interested in when they don't use category selection (B).  
 
 **Solution**  
 Find the most frequent category for each search term in subset C and extend it to subset B.  
-  
+[SQL](https://github.com/dzianissokalau/sql_analysis/blob/main/sql/segment_searches.sql)  
+[Description](https://github.com/dzianissokalau/sql_analysis/blob/main/description/segment_searches.md)  
+
 
